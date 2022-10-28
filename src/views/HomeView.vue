@@ -13,13 +13,13 @@
     <input type="range" min="1" max="100" value="50" id="rangeinput">
     </div>
   <div class="range">
-      <p class="period">Monthly Billing</p>
+      <p id="month">Monthly Billing</p>
       
       <label class="switch">
   <input type="checkbox">
   <span class="slider round"></span>
 </label>
-      <p class="period year">Yearly Billing</p>
+      <p id="year">Yearly Billing</p>
     </div>
     <div class="container-end">
       <ul>
@@ -76,14 +76,13 @@ margin-top: 3rem;
 }
 .card{
   width: 45rem;
-  height: 33rem;
+  height:fit-content;
   background: var(--white);
   box-shadow: 0px 5px 30px 2px var(--lightgreyishblue1);
   border-radius: 12px;
   padding: 3.5rem;
 }
 .top{
-
   width: 100%;
   display: flex;
   align-items: center;
@@ -165,15 +164,15 @@ input:checked + .slider:before {
   column-gap: 1.5rem;
   width: 100%;
 }
-.year::after{
+
+#year::after{
 content: "25% discount";
 font-size: small;
 padding: .4rem .6rem;
 border-radius: 26px;
-background-color: var();
-}
-.range p{
-    color: var(--lightgreyblue) !important;
+background-color: var(--greyred);
+color: var(--lightred);
+margin-left: .5rem;
 }
 li{
   list-style-type: none;
@@ -181,6 +180,7 @@ li{
   display: flex;
   align-items: center;
   column-gap: 1.4rem;
+   color: var(--greyishblue);
 }
 li img{
   width: 1rem;
@@ -188,7 +188,22 @@ li img{
 }
 .container-end{
   display: flex;
+margin-top: 3rem;
+padding-top: 3rem;
+border-top: 1px solid var(--lightgreyishblue1);
+justify-content: space-between;
+width: 100%;
+align-items: center;
 
+}
+.container-end button{
+  border: none;
+  color: var(--paleblue);
+  background: var(--darkblue);
+  width: fit-content;
+  height: fit-content;
+  padding: .8rem 3rem;
+  border-radius: 26px;
 }
 .rangediv{
   padding-top: 3rem;
@@ -197,5 +212,11 @@ li img{
 #rangeinput{
   width: 100%;
 
+}
+p#year{
+   color: var(--greyishblue);
+}
+p#month{
+  color: var(--greyishblue);
 }
 </style>
